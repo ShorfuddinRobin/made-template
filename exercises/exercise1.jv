@@ -1,6 +1,6 @@
-pipeline AirportsPipeline {
+pipeline AirportPipeline {
 
-    AirportExtractor -> AirportsTextFileInterpreter;
+    AirportExtractor -> AirportTextFileInterpreter;
 
     AirportTextFileInterpreter
         -> AirportCSVInterpreter 
