@@ -1,0 +1,23 @@
+from jayvee import Pipeline, Source, Filter, Converter, Sink
+import sqlite3
+
+# Define pipeline
+pipeline = Pipeline(
+    Source.from_csv("https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-herbstpflanzung-2023/exports/csv"),
+    Filter(lambda row: row["stadtteil"].startswith("Furth-")),
+    Filter(lambda row: "," in row["id"]),
+    Converter({
+        "id": lambda val: tuple(map(float, val.split(","))),
+        "gattung": str,
+        "art": str,
+        "pflanzjahr": int,
+        "stammumfang_cm": float,
+        "pflanzdichte_baume_pro_100m2": float,
+        "kronendurchmesser_m": float,
+        "kronendurchmesser_mittel_m": float
+    }),
+    Sink.to_sqlite("trees.sqlite", "trees")
+)
+
+# Run pipeline
+pipeline.run()
