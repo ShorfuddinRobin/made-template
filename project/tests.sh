@@ -71,4 +71,3 @@ pipeline_instance.initialize_pipeline()
 # Check if the output file exists
 check_file_exists "merged_data.csv"
 
-echo "All tests passed
