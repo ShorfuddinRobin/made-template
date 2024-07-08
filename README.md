@@ -2,20 +2,29 @@
 
 ![](https://byob.yarr.is/ShorfuddinRobin/made-template/score_ex1) ![](https://byob.yarr.is/ShorfuddinRobin/made-template/score_ex2) ![](https://byob.yarr.is/ShorfuddinRobin/made-template/score_ex3) ![](https://byob.yarr.is/ShorfuddinRobin/made-template/score_ex4) ![](https://byob.yarr.is/ShorfuddinRobin/made-template/score_ex5)
 
-# Methods of Advanced Data Engineering Template Project
-
-This template project provides some structure for your open data project in the MADE module at FAU.
-This repository contains (a) a data science project that is developed by the student over the course of the semester, and (b) the exercises that are submitted over the course of the semester.
-Before you begin, make sure you have [Python](https://www.python.org/) and [Jayvee](https://github.com/jvalue/jayvee) installed. We will work with [Jupyter notebooks](https://jupyter.org/). The easiest way to do so is to set up [VSCode](https://code.visualstudio.com/) with the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter).
-
-To get started, please follow these steps:
-1. Create your own fork of this repository. Feel free to rename the repository right after creation, before you let the teaching instructors know your repository URL. **Do not rename the repository during the semester**.
-2. Setup the exercise feedback by changing the exercise badge sources in the `README.md` file following the patter `![](https://byob.yarr.is/<github-user-name>/<github-repo>/score_ex<exercise-number>)`. 
-For example, if your user is _myuser_ and your repo is _myrepo_, then update the badge for _exercise 1_ to `![](https://byob.yarr.is/myrepo/myuser/score_ex1)`. Proceed with the remaining badges accordingly.
-
+# Climate Change Patterns in Bangladesh: A Correlation Analysis of Temperature and Rainfall Trends
 
 ## Project Work
-Your data engineering project will run alongside lectures during the semester. We will ask you to regularly submit project work as milestones so you can reasonably pace your work. All project work submissions **must** be placed in the `project` folder.
+**
+## Project Description:
+This project aims to explore the relationship between temperature and rainfall patterns in Bangladesh over time to understand the broader implications of climate change. By analyzing long-term weather data, this study seeks correlations between these variables to provide details that can helpful for policy decisions and planning for sustainable development.
+
+## Data Sources:
+Bangladesh Weather Dataset from Kaggle, providing comprehensive weather data including temperature.
+Historical Rainfall Data in Bangladesh from Kaggle, focused detailed rainfall records.
+## Methodology:
+Data Fetching and Preparation:  Downloaded datasets from Kaggle and stored in a local SQLite database.
+Data Merging: Combined datasets based on 'Year' and 'Month' columns, and handled missing values.
+Correlation Analysis: Created scatter plots and calculated the Pearson correlation coefficient to measure the linear relationship between temperature and rainfall.
+Linear Regression Analysis: Conducted to determine the influence of temperature changes on rainfall.
+## Results:
+Scatter Plot: Shows a positive relationship between temperature and rainfall.
+Correlation Coefficient: Indicates a weak positive correlation (approximately 0.232) between temperature and rainfall.
+Linear Regression: Suggests that for each degree Celsius increase in temperature, rainfall increases by approximately 1.213 mm.
+## Conclusions:
+Findings: A moderate positive correlation exists between temperature and rainfall, implying that rising temperatures could lead to increased rainfall in Bangladesh.
+Implications: These insights are crucial for developing climate change adaptation strategies, highlighting the need to consider temperature's impact on rainfall.
+Limitations and Future Work: Accuracy depends on data quality and currently focuses on temperature and rainfall only. Future work should incorporate more variables and advanced models to capture complex climate interactions.
 
 ### Exporting a Jupyter Notebook
 Jupyter Notebooks can be exported using `nbconvert` (`pip install nbconvert`). For example, to export the example notebook to html: `jupyter nbconvert --to html examples/final-report-example.ipynb --embed-images --output final-report.html`
