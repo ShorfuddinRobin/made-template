@@ -13,18 +13,18 @@ This project aims to explore the relationship between temperature and rainfall p
 Bangladesh Weather Dataset from Kaggle, providing comprehensive weather data including temperature.
 Historical Rainfall Data in Bangladesh from Kaggle, focused detailed rainfall records.
 ## Methodology:
-Data Fetching and Preparation:  Downloaded datasets from Kaggle and stored in a local SQLite database.
+Data Fetching and Preparation:  Downloaded datasets from Kaggle and stored data in local SQLite database.
 Data Merging: Combined datasets based on 'Year' and 'Month' columns, and handled missing values.
 Correlation Analysis: Created scatter plots and calculated the Pearson correlation coefficient to measure the linear relationship between temperature and rainfall.
-Linear Regression Analysis: Conducted to determine the influence of temperature changes on rainfall.
+Linear Regression Analysis: Conducted to determine the influence of temperature changes in the rainfall.
 ## Results:
-Scatter Plot: Shows a positive relationship between temperature and rainfall.
+Scatter Plot: Show a positive relationship between temperature and rainfall.
 Correlation Coefficient: Indicates a weak positive correlation (approximately 0.232) between temperature and rainfall.
 Linear Regression: Suggests that for each degree Celsius increase in temperature, rainfall increases by approximately 1.213 mm.
 ## Conclusions:
-Findings: A moderate positive correlation exists between temperature and rainfall, implying that rising temperatures could lead to increased rainfall in Bangladesh.
-Implications: These insights are crucial for developing climate change adaptation strategies, highlighting the need to consider temperature's impact on rainfall.
-Limitations and Future Work: Accuracy depends on data quality and currently focuses on temperature and rainfall only. Future work should incorporate more variables and advanced models to capture complex climate interactions.
+Findings: A moderate positive correlation exists between temperature and rainfall, which rising temperatures could lead to increased rainfall in Bangladesh.
+Implications: These insights are crucial for developing climate change adaptation strategies, highlighting this to consider temperature's impact on rainfall.
+Limitations and Future Work: Accuracy depends on data quality and currently focuses on temperature and rainfall only.In future should be more variables and advanced models will add to capture complex climate interactions.
 
 ### Exporting a Jupyter Notebook
 Jupyter Notebooks can be exported using `nbconvert` (`pip install nbconvert`). For example, to export the example notebook to html: `jupyter nbconvert --to html examples/final-report-example.ipynb --embed-images --output final-report.html`
